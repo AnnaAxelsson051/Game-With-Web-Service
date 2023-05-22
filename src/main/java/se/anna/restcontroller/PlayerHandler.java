@@ -37,4 +37,14 @@ public class PlayerHandler {
         return playerDAO.save(player);
     }
 
+
+    @PutMapping("/rest/updatePlayer/{id}/{name}")
+    public ResponseEntity<Player> updatePlayer(@PathVariable(value = "id") int id,
+                                               @PathVariable(value = "name") String name) {
+        Player player = playerDAO.findById(id).get();
+        player.setName(name);
+        Player updatedPlayer = playerDAO.save(player);
+        return ResponseEntity.ok(updatedPlayer);
+    }
+
 }
