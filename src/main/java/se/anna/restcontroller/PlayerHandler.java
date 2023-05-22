@@ -12,4 +12,14 @@ import java.util.List;
 @RestController
 public class PlayerHandler {
 
+
+    @Autowired
+    PlayerDAO playerDAO;
+
+    @GetMapping("/rest/getPlayerById/{id}")
+    public Player getPlayerById(@PathVariable(value = "id") int id) {
+        return playerDAO.findById(id).get();
+    }
+    
+
 }
