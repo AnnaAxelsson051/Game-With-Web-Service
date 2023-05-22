@@ -13,7 +13,7 @@ import java.util.List;
 @SessionScope
 public class GuessService {
 
-    int hemligt;
+    int secret;
     int guessCount;
 
     Player player;
@@ -24,7 +24,7 @@ public class GuessService {
 
     @PostConstruct
     public void init() {
-        hemligt = (int)(Math.random()*10 + 1);
+        secret = (int)(Math.random()*10 + 1);
         guessCount = 0;
     }
 
@@ -46,18 +46,18 @@ public class GuessService {
     public String guess(int tal) {
         if (!isLoggedin) throw new IllegalStateException("Not logged in");
         guessCount++;
-        if (tal < hemligt) {
+        if (tal < secret) {
             return "Too small number";
         }
-        if (tal > hemligt) {
+        if (tal > secret) {
             return "To big number";
         }
-        int resultat = guessCount;
+        int result = guessCount;
 
         init();//
 
-        registerResult(resultat);
-        return "Rätt på " + resultat + " gissningar! Nytt tal på gång!";
+        registerResult(result);
+        return "Rätt på " + result + " gissningar! Nytt tal på gång!";
     }
 
 
