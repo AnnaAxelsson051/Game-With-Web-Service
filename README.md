@@ -8,8 +8,10 @@
 ## Technologies used
 
 > - Spring Boot
+> - Spring Data
 > - Jpa
 > - Thymeleaf
+> - HTML
 > - MySQL Workbench
 > - Rest controller
 > - Postman
