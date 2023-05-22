@@ -26,5 +26,9 @@ public class PlayerHandler {
         return playerDAO.findAll();
     }
 
+    @GetMapping("/rest/getTopPlayer")
+    public PlayerAverage getTopPlayer() {
+        return playerDAO.getTopList().get(0);
 
+    }
 }
