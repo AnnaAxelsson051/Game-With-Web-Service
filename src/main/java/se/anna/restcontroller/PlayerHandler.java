@@ -31,4 +31,10 @@ public class PlayerHandler {
         return playerDAO.getTopList().get(0);
 
     }
+
+    @PostMapping("/rest/createPlayer")
+    public Player createPlayer(@RequestBody Player player) {
+        return playerDAO.save(player);
+    }
+
 }
