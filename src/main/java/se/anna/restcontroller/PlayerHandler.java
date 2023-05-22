@@ -47,4 +47,14 @@ public class PlayerHandler {
         return ResponseEntity.ok(updatedPlayer);
     }
 
+
+    @DeleteMapping("/rest/deletePlayer/{id}")
+    public ResponseEntity<Player> deletePlayer(@PathVariable(value = "id") int id){
+        Player player = playerDAO.findById(id).get();
+        playerDAO.delete(player);
+        Player updatedPlayer = playerDAO.save(player);
+        return ResponseEntity.ok(updatedPlayer);
+
+
+    }
 }
