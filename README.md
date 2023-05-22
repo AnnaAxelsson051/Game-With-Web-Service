@@ -1,5 +1,5 @@
 
-# Game-Web-Service
+# Guess-Game-with-Web-Service
 
 ## Description
 
@@ -8,7 +8,9 @@
 ## Technologies used
 
 > - Spring
+> - Jpa
 > - Rest controller
 > - Postman
+> - Thymeleaf
 
 
