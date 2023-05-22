@@ -42,4 +42,34 @@ public class GuessService {
         isLoggedin = true;
     }
 
+
+    public String guess(int tal) {
+        if (!isLoggedin) throw new IllegalStateException("Not logged in");
+        guessCount++;
+        if (tal < hemligt) {
+            return "Too small number";
+        }
+        if (tal > hemligt) {
+            return "To big number";
+        }
+        int resultat = guessCount;
+
+        init();//
+
+        registerResult(resultat);
+        return "Rätt på " + resultat + " gissningar! Nytt tal på gång!";
+    }
+
+
+    public void registerResult(int nGuesses) {
+        if (!isLoggedin) return;
+
+        player.addResult(nGuesses);
+        player = dao.save(player);
+    }
+
+    public List<PlayerAverage> getTopList() {
+        return dao.getTopList();
+    }
+
 }
