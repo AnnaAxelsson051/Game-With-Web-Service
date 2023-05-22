@@ -57,7 +57,7 @@ public class GuessService {
         init();//
 
         registerResult(result);
-        return "Rätt på " + result + " gissningar! Nytt tal på gång!";
+        return "Correct at " + result + " guesses! New number coming up!";
     }
 
 
