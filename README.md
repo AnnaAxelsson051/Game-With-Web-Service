@@ -3,14 +3,16 @@
 
 ## Description
 
-> A Simple Web Service with crud-operations for the Guess Game App.
+> A guess game application that saves each player result and delivers a top list containing all player averages. A player needs to be identified by logging in before playing and is added as a new player in the database. Also includes a simple Web Service with crud-operations for the Guess Game App.
 
 ## Technologies used
 
-> - Spring
+> - Spring Boot
 > - Jpa
+> - Thymeleaf
+> - MySQL Workbench
 > - Rest controller
 > - Postman
-> - Thymeleaf
+
 
 
