@@ -5,10 +5,10 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
 <body>
-<h1>Gissa mitt tal!</h1>
-<form action="/gissa" method="post">
-    <p><input type="text" name="gissning" size="8"/></p>
-    <p><input type="submit" value="Gissa" /></p>
+<h1>Guess the right number, between 1-10.</h1>
+<form action="/guess" method="post">
+    <p><input type="text" name="guessing" size="8"/></p>
+    <p><input type="submit" value="Guess" /></p>
 </form>
 <br/>
 <p th:text="${reply}">Svar</p>

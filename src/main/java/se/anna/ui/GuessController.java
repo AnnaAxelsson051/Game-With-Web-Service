@@ -10,7 +10,7 @@ import se.anna.business.GuessService;
 
 
 @Controller
-public class GissaController {
+public class GuessController {
 	
 	
 	@Autowired
@@ -19,16 +19,16 @@ public class GissaController {
     @PostMapping("/login")
     public String login(@RequestParam("playername") String pname, Model m) {
         gissaService.login(pname);
-        return "gissapage";
+        return "guesspage";
     }
 
 
      
-     @PostMapping("/gissa")
-     public String fillForm(@RequestParam("gissning") int gissa, Model m) {
+     @PostMapping("/guess")
+     public String fillForm(@RequestParam("guessing") int gissa, Model m) {
     	 		String svar = gissaService.guess(gissa);
     	 		m.addAttribute("reply", svar);
-    	 		return "gissapage";
+    	 		return "guesspage";
      }
 
      @GetMapping("/toplist")
