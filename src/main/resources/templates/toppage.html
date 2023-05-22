@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Alla par</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<table>
+  <thead>
+    <tr>
+      <th>Player</th>
+      <th>Average</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr th:each="p: ${toplist}">
+      <td th:text="${p.player}"></td>
+      <td th:text="${p.average}"></td>
+    </tr>
+  </tbody>
+</table>
+</body>
+</html>
