@@ -20,6 +20,11 @@ public class PlayerHandler {
     public Player getPlayerById(@PathVariable(value = "id") int id) {
         return playerDAO.findById(id).get();
     }
-    
+
+    @GetMapping("/rest/getAllPlayers")
+    public List<Player> getAllPlayers() {
+        return playerDAO.findAll();
+    }
+
 
 }
