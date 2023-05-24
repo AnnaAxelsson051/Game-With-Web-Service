@@ -8,8 +8,7 @@
 ## Technologies used
 
 > - Spring Boot
-> - Spring Data
-> - Jpa
+> - Spring Data Jpa
 > - Thymeleaf
 > - HTML
 > - MySQL Workbench
